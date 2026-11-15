@@ -1,0 +1,11 @@
+[
+  { "id": "fp32", "name": "FP32", "bpp": 4.0 },
+  { "id": "fp16", "name": "FP16 / BF16", "bpp": 2.0 },
+  { "id": "int8", "name": "INT8 / GPTQ 8-bit", "bpp": 1.0 },
+  { "id": "int4", "name": "INT4 / GPTQ 4-bit", "bpp": 0.5625 },
+  { "id": "awq", "name": "AWQ (4-bit)", "bpp": 0.5625 },
+  { "id": "q4km", "name": "GGUF Q4_K_M", "bpp": 0.604 },
+  { "id": "q5km", "name": "GGUF Q5_K_M", "bpp": 0.711 },
+  { "id": "q6k", "name": "GGUF Q6_K", "bpp": 0.821 },
+  { "id": "q80", "name": "GGUF Q8_0", "bpp": 1.0625 }
+]

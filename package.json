@@ -1,0 +1,31 @@
+{
+  "name": "vram-fit",
+  "version": "0.1.0",
+  "description": "Estimate GPU memory for running a language model and list GPUs that fit, with dated rental rates.",
+  "bin": {
+    "vram-fit": "bin/vram-fit.js"
+  },
+  "main": "src/estimate.js",
+  "files": [
+    "bin",
+    "src",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "gpu",
+    "vram",
+    "llm",
+    "inference",
+    "estimator"
+  ],
+  "author": "PodMan9000",
+  "license": "MIT"
+}

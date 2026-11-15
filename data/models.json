@@ -1,0 +1,16 @@
+[
+  { "id": "llama31-8b", "name": "Llama 3.1 8B", "params": 8, "layers": 32, "hidden": 4096, "kvHeads": 8, "headDim": 128 },
+  { "id": "llama31-70b", "name": "Llama 3.1 70B", "params": 70, "layers": 80, "hidden": 8192, "kvHeads": 8, "headDim": 128 },
+  { "id": "llama31-405b", "name": "Llama 3.1 405B", "params": 405, "layers": 126, "hidden": 16384, "kvHeads": 8, "headDim": 128 },
+  { "id": "qwen25-7b", "name": "Qwen 2.5 7B", "params": 7.6, "layers": 28, "hidden": 3584, "kvHeads": 4, "headDim": 128 },
+  { "id": "qwen25-14b", "name": "Qwen 2.5 14B", "params": 14.8, "layers": 48, "hidden": 5120, "kvHeads": 8, "headDim": 128 },
+  { "id": "qwen25-32b", "name": "Qwen 2.5 32B", "params": 32.5, "layers": 64, "hidden": 5120, "kvHeads": 8, "headDim": 128 },
+  { "id": "qwen25-72b", "name": "Qwen 2.5 72B", "params": 72.7, "layers": 80, "hidden": 8192, "kvHeads": 8, "headDim": 128 },
+  { "id": "mistral-7b", "name": "Mistral 7B", "params": 7.2, "layers": 32, "hidden": 4096, "kvHeads": 8, "headDim": 128 },
+  { "id": "mixtral-8x7b", "name": "Mixtral 8x7B", "params": 46.7, "layers": 32, "hidden": 4096, "kvHeads": 8, "headDim": 128, "moe": true },
+  { "id": "deepseek-v3", "name": "DeepSeek V3", "params": 671, "layers": 61, "hidden": 7168, "mla": { "kvLoraRank": 512, "ropeDim": 64 }, "moe": true },
+  { "id": "phi4-mini", "name": "Phi-4 Mini", "params": 3.8, "layers": 32, "hidden": 3072, "kvHeads": 8, "headDim": 128 },
+  { "id": "gemma2-9b", "name": "Gemma 2 9B", "params": 9.2, "layers": 42, "hidden": 3584, "kvHeads": 8, "headDim": 256 },
+  { "id": "gemma2-27b", "name": "Gemma 2 27B", "params": 27.2, "layers": 46, "hidden": 4608, "kvHeads": 16, "headDim": 128 },
+  { "id": "sdxl", "name": "SDXL", "params": 3.5, "image": true }
+]
