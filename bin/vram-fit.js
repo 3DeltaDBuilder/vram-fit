@@ -203,7 +203,7 @@ function renderText(res, inp, est) {
   }
   lines.push('');
   res.notes.forEach(function (n) { lines.push('Note: ' + n); });
-  lines.push('Rates are dated snapshots and change. Check the provider. Web version: ' + WEB_URL);
+  lines.push('Rates are snapshots and change. Check the provider. Web version: ' + WEB_URL);
   return lines.join('\n');
 }
 

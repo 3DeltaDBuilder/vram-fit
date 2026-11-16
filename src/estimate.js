@@ -129,7 +129,7 @@ function evaluate(est, cloud, gpus) {
     let needed = 0;
     for (let ci = 0; ci < GPU_COUNTS.length; ci++) {
       const n = GPU_COUNTS[ci];
-      if (n > g.max) break;
+      if (n > (cloud === 'community' && g.maxCommunity ? g.maxCommunity : g.max)) break;
       needed = shared + OVERHEAD_GB * n;
       const cap = g.vram * n;
       if (needed <= cap * USABLE_FRACTION) { count = n; status = 'fits'; break; }

@@ -25,7 +25,7 @@ A browser version of the same arithmetic: https://3deltadbuilder.github.io/calcu
 
 ## What it does
 
-Given a model (from the built-in table, or a parameter count), a quantization, a context length and a batch size, it prints estimated weights, KV cache, activations, framework overhead and a total, then lists GPU configurations with enough memory, cheapest first, using the dated rates in `data/gpus.json`.
+Given a model (from the built-in table, or a parameter count), a quantization, a context length and a batch size, it prints estimated weights, KV cache, activations, framework overhead and a total, then lists GPU configurations with enough memory, cheapest first, using the rates in `data/gpus.json`.
 
 ## What it does not do
 
@@ -124,7 +124,7 @@ To update the rates, edit `data/gpus.json`:
 3. Update the `source` note if you got the numbers somewhere else.
 4. Run `node --test`. The tests check that every entry is well formed; some assertions pin the shipped values (the rates wording and the cheapest 70B entry), so change those too when you intentionally refresh the data.
 
-Other GPU providers, or a GPU not in the list, can be added the same way: `id`, `name`, `vram` (GB), `secure`, `community`, `max` (largest count per pod), `nvlink`.
+Other GPU providers, or a GPU not in the list, can be added the same way: `id`, `name`, `vram` (GB), `secure`, `community`, `max` (largest count per pod in Secure Cloud), optional `maxCommunity` (largest count in Community Cloud), `nvlink`.
 
 ## Measured versus estimated
 

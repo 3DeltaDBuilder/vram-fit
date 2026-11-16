@@ -1,7 +1,7 @@
 {
   "name": "vram-fit",
   "version": "0.1.0",
-  "description": "Estimate GPU memory for running a language model and list GPUs that fit, with dated rental rates.",
+  "description": "Estimate GPU memory for running a language model and list GPUs that fit, with rental rates.",
   "bin": {
     "vram-fit": "bin/vram-fit.js"
   },
@@ -26,6 +26,6 @@
     "inference",
     "estimator"
   ],
-  "author": "PodMan9000",
+  "author": "3DeltaDBuilder",
   "license": "MIT"
 }
