@@ -21,7 +21,7 @@ GPUs that fit, Secure Cloud, cheapest first (RunPod rates as of 2026-11-15):
   ...
 ```
 
-A browser version of the same arithmetic: https://podman9000.github.io/gpu-advisor/calculator.html
+A browser version of the same arithmetic: https://3deltadbuilder.github.io/calculator.html
 
 ## What it does
 

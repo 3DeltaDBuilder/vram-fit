@@ -8,7 +8,7 @@ const MODELS = require('../data/models.json');
 const QUANTS = require('../data/quants.json');
 const pkg = require('../package.json');
 
-const WEB_URL = 'https://podman9000.github.io/gpu-advisor/calculator.html';
+const WEB_URL = 'https://3deltadbuilder.github.io/calculator.html';
 
 const STATUS_LABEL = { fits: 'fits', tight: 'tight', multi: 'multi', 'multi-tight': 'multi, tight' };
 
