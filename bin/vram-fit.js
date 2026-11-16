@@ -49,7 +49,7 @@ function usage() {
     '  --help, --version',
     '',
     'Exit codes: 0 ok, 2 bad input.',
-    'This is an estimate, not a measurement. Rates are dated snapshots (' + gpuData.ratesDate + ').'
+    'This is an estimate, not a measurement. Rates are snapshots, checked ' + gpuData.ratesChecked + '.'
   ].join('\n');
 }
 
@@ -126,7 +126,7 @@ function round(n, d) {
 
 function buildResult(inp, est, rows) {
   return {
-    ratesDate: gpuData.ratesDate,
+    ratesChecked: gpuData.ratesChecked,
     ratesSource: gpuData.source,
     cloud: inp.cloud,
     input: {
@@ -191,7 +191,7 @@ function renderText(res, inp, est) {
     lines.push('No GPU configuration (1, 2, 4 or 8 identical GPUs, up to each GPU\'s per-pod maximum) in the ' + cloudLabel + ' list has enough memory.');
     lines.push('Try a smaller quantization, a shorter context, or a smaller batch.');
   } else {
-    lines.push('GPUs that fit, ' + cloudLabel + ', cheapest first (RunPod rates as of ' + gpuData.ratesDate + '):');
+    lines.push('GPUs that fit, ' + cloudLabel + ', cheapest first (RunPod rates checked ' + gpuData.ratesChecked + '):');
     lines.push('');
     const nameW = Math.max(3, Math.max.apply(null, res.gpus.map(function (g) { return displayName(g).length; })));
     lines.push('  ' + 'GPU'.padEnd(nameW) + '  ' + 'VRAM'.padStart(8) + '  ' + 'Need'.padStart(9) + '  ' + 'Status'.padEnd(12) + '  ' + '$/hr'.padStart(7));

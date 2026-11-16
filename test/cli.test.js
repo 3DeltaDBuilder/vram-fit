@@ -23,14 +23,14 @@ test('--model llama31-70b --quant int4 --context 8192 prints the breakdown and r
   assert.match(r.out, /Activations\s+3\.94 GB/);
   assert.match(r.out, /Overhead\s+1\.50 GB/);
   assert.match(r.out, /Total\s+47\.31 GB/);
-  assert.match(r.out, /2026-11-15/);
+  assert.match(r.out, /within the last 30 days/);
 });
 
 test('--json output has the breakdown and GPU rows', () => {
   const j = json('--model', 'llama31-70b', '--quant', 'int4', '--context', '8192');
   assert.deepEqual(j.estimateGB, { weights: 39.38, kvCache: 2.5, activations: 3.94, overhead: 1.5, total: 47.31 });
   assert.equal(j.kvBytesPerToken, 327680);
-  assert.equal(j.ratesDate, '2026-11-15');
+  assert.equal(j.ratesChecked, 'within the last 30 days');
   assert.equal(j.cloud, 'secure');
   assert.equal(j.gpus[0].id, 'a40');
   assert.equal(j.gpus[0].status, 'tight');

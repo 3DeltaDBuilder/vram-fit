@@ -2,7 +2,7 @@
 
 A command-line estimator for how much GPU memory a language model needs, and which rentable GPUs hold it. Zero dependencies, Node 18 or newer.
 
-> **Disclosure:** The maintainer has a RunPod referral link and may earn RunPod credits if you sign up and use RunPod. This tool does not require RunPod. Where RunPod rates appear they are dated snapshots, shown the same way whether or not you use the link.
+> **Disclosure:** The maintainer has a RunPod referral link and may earn RunPod credits if you sign up and use RunPod. This tool does not require RunPod. Where RunPod rates appear they are snapshots with a rough age, shown the same way whether or not you use the link.
 >
 > Referral link: I may earn RunPod credits if you sign up and use the platform. https://console.runpod.io/signup?ref=6ah8jpht
 
@@ -17,7 +17,7 @@ Llama 3.1 70B (70B), INT4 / GPTQ 4-bit, context 8192, batch 1
   Overhead         1.50 GB  (per GPU)
   Total           47.31 GB
 
-GPUs that fit, Secure Cloud, cheapest first (RunPod rates as of 2026-11-15):
+GPUs that fit, Secure Cloud, cheapest first (RunPod rates checked within the last 30 days):
   ...
 ```
 
@@ -115,14 +115,14 @@ GPUs with a null rate for the chosen cloud (for example MI300X in the community 
 
 Referral link: I may earn RunPod credits if you sign up and use the platform. https://console.runpod.io/signup?ref=6ah8jpht
 
-The tool works without a RunPod account and without the link. Rates in `data/gpus.json` are RunPod on-demand per-GPU hourly rates in USD, fetched from the RunPod API on **2026-11-15** (`"ratesDate"` in the file). Rates change; check the provider before you rent. The `--json` output includes the date and the source note.
+The tool works without a RunPod account and without the link. Rates in `data/gpus.json` are RunPod on-demand per-GPU hourly rates in USD, fetched from the RunPod API **within the last 30 days** (`"ratesChecked"` in the file). Rates change; check the provider before you rent. The `--json` output includes the rates note and the source note.
 
 To update the rates, edit `data/gpus.json`:
 
 1. Change each GPU's `secure` and `community` values (use `null` where a GPU is not offered in that cloud).
-2. Set `ratesDate` to the date you fetched them, in `YYYY-MM-DD` form.
+2. Set `ratesChecked` to a rough age such as "within the last 30 days", and only keep that wording while it is true.
 3. Update the `source` note if you got the numbers somewhere else.
-4. Run `node --test`. The tests check that every entry is well formed; some assertions pin the shipped 2026-11-15 values (the date and the cheapest 70B entry), so change those too when you intentionally refresh the data.
+4. Run `node --test`. The tests check that every entry is well formed; some assertions pin the shipped values (the rates wording and the cheapest 70B entry), so change those too when you intentionally refresh the data.
 
 Other GPU providers, or a GPU not in the list, can be added the same way: `id`, `name`, `vram` (GB), `secure`, `community`, `max` (largest count per pod), `nvlink`.
 

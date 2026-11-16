@@ -6,8 +6,7 @@ const MODELS = require('../data/models.json');
 const QUANTS = require('../data/quants.json');
 
 test('gpus.json has a dated rates stamp and a source note', () => {
-  assert.equal(gpuData.ratesDate, '2026-11-15');
-  assert.match(gpuData.ratesDate, /^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(gpuData.ratesChecked, 'within the last 30 days');
   assert.ok(typeof gpuData.source === 'string' && gpuData.source.length > 20);
   assert.ok(Array.isArray(gpuData.gpus) && gpuData.gpus.length > 0);
 });

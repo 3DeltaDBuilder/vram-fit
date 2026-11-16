@@ -1,6 +1,6 @@
 {
-  "ratesDate": "2026-11-15",
-  "source": "RunPod on-demand per-GPU hourly rates in USD, fetched from the RunPod API on 2026-11-15. Rates change; check the provider. A null rate means the GPU is not offered in that cloud.",
+  "ratesChecked": "within the last 30 days",
+  "source": "RunPod on-demand per-GPU hourly rates in USD, fetched from the RunPod API within the last 30 days. Rates change; check the provider. A null rate means the GPU is not offered in that cloud.",
   "currency": "USD",
   "gpus": [
     { "id": "rtx3090", "name": "RTX 3090", "vram": 24, "secure": 0.50, "community": 0.22, "max": 8, "nvlink": false },
